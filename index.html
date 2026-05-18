@@ -1,11 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant-TW">
 <head>
-    <title>網頁標題</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的第一個 HTML 網站</title>
+    <style>
+        /* 這裡可以編寫簡單的 CSS 來美化網頁 */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>這是一個大標題</h1>
-    <p>這是一個段落文字。</p>
-    <a href="https://example.com">這是一個超連結</a>
+
+    <!-- 網頁頁首 -->
+    <header>
+        <h1>歡迎來到我的網站</h1>
+    </header>
+
+    <!-- 網頁主要內容區 -->
+    <main>
+        <h2>關於本站</h2>
+        <p>這是我手寫實作的第一個 HTML 網頁！HTML 負責建構網頁的骨架與內容。</p>
+        
+        <h2>常用標籤範例</h2>
+        <ul>
+            <li><strong>粗體字：</strong>使用 strong 標籤來加強語氣。</li>
+            <li><strong>圖片：</strong>可以使用 img 標籤插入圖片。</li>
+            <li><strong>超連結：</strong>點擊前往 <a href="https://developer.mozilla.org/zh-TW/docs/Learn_web_development" target="_blank">MDN Web 學習發展官網</a> 閱讀更多教學。</li>
+        </ul>
+    </main>
+
+    <!-- 網頁頁尾 -->
+    <footer>
+        <p style="text-align: center; color: #777;">&copy; 2026 我的實作網站</p>
+    </footer>
+
 </body>
 </html>
