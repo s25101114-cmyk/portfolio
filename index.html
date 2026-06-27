@@ -1,55 +1,265 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的第一個 HTML 網站</title>
+    <title>作品集入口 - 網頁設計期末作業</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        /* 這裡可以編寫簡單的 CSS 來美化網頁 */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        :root {
+            --primary-color: #4f46e5;
+            --primary-hover: #4338ca;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-main: #111827;
+            --text-sub: #4b5563;
+        }
+
+        * {
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* 導覽列樣式 */
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
+            background-color: var(--card-bg);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-sub);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 主要內容區塊 */
         main {
-            background: #fff;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 5px;
+            flex: 1;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-sub);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* 作品集網格配置 */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .project-img-placeholder {
+            height: 180px;
+            background-color: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #9ca3af;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description {
+            color: var(--text-sub);
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .btn-link {
+            display: inline-block;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .btn-link:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* 頁尾樣式 */
+        footer {
+            background-color: var(--card-bg);
+            text-align: center;
+            padding: 1.5rem;
+            border-top: 1px solid #e5e7eb;
+            font-size: 0.875rem;
+            color: var(--text-sub);
+        }
+
+        /* 響應式調整 */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .nav-links {
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- 網頁頁首 -->
     <header>
-        <h1>歡迎來到我的網站</h1>
+        <nav class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-code"></i> Portfolio Portal
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#projects">作品列表</a></li>
+                <li><a href="https://github.com/s25101114-cmyk/portfolio" target="_blank"><i class="fa-brands fa-github"></i> GitHub 倉庫</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- 網頁主要內容區 -->
     <main>
-        <h2>關於本站</h2>
-        <p>這是我手寫實作的第一個 HTML 網頁！HTML 負責建構網頁的骨架與內容。</p>
-        
-        <h2>常用標籤範例</h2>
-        <ul>
-            <li><strong>粗體字：</strong>使用 strong 標籤來加強語氣。</li>
-            <li><strong>圖片：</strong>可以使用 img 標籤插入圖片。</li>
-            <li><strong>超連結：</strong>點擊前往 <a href="https://developer.mozilla.org/zh-TW/docs/Learn_web_development" target="_blank">MDN Web 學習發展官網</a> 閱讀更多教學。</li>
-        </ul>
+        <section id="home" class="hero">
+            <h1>網頁設計期末作業作品集</h1>
+            <p>歡迎來到我的期末專案入口網站。在這裡集成了本學期所完成的各項網頁設計專案，請點擊下方按鈕前往各個作品頁面進行瀏覽與體驗。</p>
+        </section>
+
+        <section id="projects" class="projects-grid">
+            
+            <div class="project-card">
+                <div class="project-img-placeholder">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">期末專案作品一</h3>
+                    <p class="project-description">說明：請在此處填入你第一個網頁作品的簡介或特色（例如：響應式前端排版、互動式表單設計等）。</p>
+                    <a href="project1/index.html" class="btn-link">前往作品</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-placeholder">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">期末專案作品二</h3>
+                    <p class="project-description">說明：請在此處填入你第二個網頁作品的簡介或功能亮點，方便審閱者快速掌握專案核心。</p>
+                    <a href="project2/index.html" class="btn-link">前往作品</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-placeholder">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">期末專案作品三</h3>
+                    <p class="project-description">說明：如有其他補充作品或綜合練習，可在此條列展示，若無則可直接刪除此卡片區塊。</p>
+                    <a href="project3/index.html" class="btn-link">前往作品</a>
+                </div>
+            </div>
+
+        </section>
     </main>
 
-    <!-- 網頁頁尾 -->
     <footer>
-        <p style="text-align: center; color: #777;">&copy; 2026 我的實作網站</p>
+        <p>&copy; 2026 網頁設計期末作業. All Rights Reserved.</p>
     </footer>
 
 </body>

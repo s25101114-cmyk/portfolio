@@ -14,4 +14,4 @@
 - JavaScript DOM 操作
 
 ## 🤖 AI 使用說明
-（簡述使用了哪些 AI 工具，以及如何使用）
+美化index.html
