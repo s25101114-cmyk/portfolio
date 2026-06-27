@@ -7,7 +7,6 @@
 body {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 100%;
-/* background gradient at top of page, from http://www.colorzilla.com/gradient-editor/ */
   background: -moz-linear-gradient(top,  #ffa853 0%, #fdf9bd 2%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa853),color-stop(2%,#fdf9bd));
   background: -webkit-linear-gradient(top,  #ffa853 0%,#fdf9bd 2%);
@@ -16,11 +15,9 @@ body {
   background: linear-gradient(top,  #ffa853 0%,#fdf9bd 2%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa853', endColorstr='#fdf9bd',GradientType=0 );
   background-repeat: repeat-x;
-  background-color: #fdf9bd; /* Old browsers */
+  background-color: #fdf9bd; 
   margin: 0;
 }
-
-/* link styles */
 
 a {
 	text-decoration: none;
@@ -43,8 +40,6 @@ a:active {
 	color:#F00;
 }
 
-
-/* styles for the intro section */
 #intro {
 	text-align: center;
 	margin: 2em 0 1em;
@@ -65,26 +60,22 @@ a:active {
 	margin: 1em;
 }
 
-
-
-
-/* styles for navigation */
 #nav {
 	background-color: #751c54;
   overflow: hidden;
-		width: 100%;
+	width: 100%;
 }
 #nav ul {
-		list-style: none;
-		padding: 0;
-		margin: 0 auto;
-		width: 19.5em;
-	}
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	width: 19.5em;
+}
 #nav ul li {
-		font-weight: normal;
-    text-transform: uppercase;
-		float: left;
-	}
+	font-weight: normal;
+  text-transform: uppercase;
+	float: left;
+}
 #nav ul a:link {
     color: #fff;
   }
@@ -92,26 +83,24 @@ a:active {
     color: #fff;
   }
 #nav ul a:focus {
-		color:#fc6;
-    border-color: #fff;
-	}
-	#nav ul a:hover {
-		color: #fc6;
-		border-color: #fff;
-	}
+	color:#fc6;
+  border-color: #fff;
+}
+#nav ul a:hover {
+	color: #fc6;
+	border-color: #fff;
+}
 #nav ul a:active {
 	color:#F00;
 }
 #nav ul li a {
-		display: block;
-		padding: .5em;
-		border: 1px solid #ba89a8;
-		border-radius: .5em;
-		margin: .25em;
-	}
+	display: block;
+	padding: .5em;
+	border: 1px solid #ba89a8;
+	border-radius: .5em;
+	margin: .25em;
+}
 	
-/* styles for the products section */
-
 #products {
   background-color: #FFF;
   line-height: 1.5em;
@@ -120,14 +109,15 @@ a:active {
   margin: 1em;
   clear: both;
   overflow: hidden;
-  }
+}
 
 #products h2 {
   font-size: 1.2em;
   color: #ac267b;
   text-align: center;
   text-transform: uppercase;
-  }
+}
+
 #products h3 {
   font-size: 1em;
   text-transform: uppercase;
@@ -137,16 +127,15 @@ a:active {
   padding-left: 1em;
   margin-top: 2.5em;
 }
+
 #products img {
-		float: left;
-		margin: 0 6px 6px 0;
-	}
-  #products .more {
-		clear: left;
-	}
+	float: left;
+	margin: 0 6px 6px 0;
+}
 
-
-/* styles for the testimonials box */
+#products .more {
+	clear: left;
+}
 
 #testimonials {
   background: #FFBC53 url(images/ex-circle-corner.gif) no-repeat left top;
@@ -158,33 +147,25 @@ a:active {
   -moz-border-radius: 20px;
   border-radius: 20px;
   margin: 1em 10%;
-  }
+}
   
 #testimonials h2 {
   font-size: 1em;
   text-transform: uppercase;
   color: #F26521;
   letter-spacing: 3px;
-  }
+}
 
-
-/* miscellaneous styles */
-  
 em { 
   color: #F26521;
-  }
+}
   
 p#copyright {
   color:#663333; 
   font-size: .8em;
   text-align: center;
-  }
-
-
-	
-	
+}
 </style>
-
 </head>
 
 <body>
@@ -213,9 +194,8 @@ p#copyright {
 <p><img src="images/glasses.jpg" alt="photo of glasses decorated with the letter R"></p>
 <p><em>The perfect wedding gift.</em> Our highest quality glassware is sandblasted by hand with the character of your choice. Choose from 30 characters and 24 typefaces. Custom designs are also available for an additional design charge. Allow 2 to 4 weeks for delivery. </p>
 <p class="more">
-		<a href="#">More about custom barware...</a>
-	</p>
-
+	<a href="#">More about custom barware...</a>
+</p>
 
 <h3>Babyware</h3>
 <p><img src="images/shirts.jpg"alt="photos of shirts personalized with initial letters"></p>
@@ -223,7 +203,6 @@ p#copyright {
 <p class="more"><a href="#">More about our onesies...</a></p>
 
 </div>
-
 
 <div id="testimonials">
   <h2>Testimonials</h2>
@@ -233,6 +212,6 @@ p#copyright {
 <p>&nbsp;</p>
 <p id="copyright">All content copyright &copy; Jennifer Robbins and Jenware, Inc. </p>
 
-</div><!-- end #content -->
+</div>
 </body>
 </html>
